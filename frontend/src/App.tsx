@@ -37,7 +37,7 @@ export default function App() {
       });
 
       // REMINDER: Change your URL to use relative path in production!
-      const response = await fetch("https://speech-text-backend.onrender.com/api/transcribe/upload", {
+      const response = await fetch("https://speech-to-text-backend-k4ar.onrender.com/", {
         method: "POST",
         body: formData,
       });
@@ -51,7 +51,7 @@ export default function App() {
         setError("No transcription received");
       }
     } catch (err) {
-      setError("Failed to transcribe audio. Please try again.");
+      setError("Failed to transcribe audio. Please try again." + err);
     }
     setLoading(false);
   };
