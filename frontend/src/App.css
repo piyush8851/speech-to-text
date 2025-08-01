@@ -1,0 +1,114 @@
+:root {
+  --primary-orange: #ffa500;
+  --primary-orange-dark: #cc8400;
+  --background-white: #121212;
+  --text-dark: #ffffff;
+  --text-light: #bbbbbb;
+  --grey-light: #1e1e1e;
+  --border-radius: 10px;
+  --transition: 0.25s ease-in-out;
+  --shadow-soft: rgba(0, 0, 0, 0.5);
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-white);
+  color: var(--text-dark);
+}
+
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  color: var(--primary-orange);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: var(--grey-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px var(--shadow-soft);
+  margin-bottom: 2rem;
+}
+
+.upload-container {
+  border: 2px dashed var(--primary-orange);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  background-color: var(--grey-light);
+  color: var(--text-light);
+}
+
+.upload-container.drag-active {
+  background-color: #2a2a2a;
+  color: var(--text-dark);
+}
+
+.upload-btn, .record-btn {
+  background-color: var(--primary-orange);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.upload-btn:hover, .record-btn:hover {
+  background-color: var(--primary-orange-dark);
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);
+}
+
+.record-btn.stop {
+  background-color: #e53935;
+}
+
+.record-btn.stop:hover {
+  background-color: #c62828;
+}
+
+.result-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: var(--border-radius);
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 10px rgba(255, 165, 0, 0.1);
+}
+
+.notification {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+  transition: var(--transition);
+}
+
+.notification.success {
+  background-color: #1f3f2e;
+  color: #81c784;
+  border: 1px solid #388e3c;
+}
+
+.notification.error {
+  background-color: #3c1f1f;
+  color: #ef5350;
+  border: 1px solid #d32f2f;
+}
